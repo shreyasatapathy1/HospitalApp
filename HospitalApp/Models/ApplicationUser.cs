@@ -9,8 +9,7 @@ namespace HospitalApp.Models
         [Required, MaxLength(100)]
         public string Name { get; set; }
 
-        [Required]
-        public string Role { get; set; } // "Admin", "Doctor", "Patient"
+        
 
     }
 }

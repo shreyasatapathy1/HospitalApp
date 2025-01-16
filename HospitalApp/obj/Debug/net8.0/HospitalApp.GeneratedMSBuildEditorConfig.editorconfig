@@ -32,12 +32,28 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxBZGREb2N0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/2369954/OneDrive - Cognizant/Desktop/Hospital_Management_System/HospitalApp/HospitalApp/Areas/Admin/Views/Home/DeleteDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxEZWxldGVEb2N0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/2369954/OneDrive - Cognizant/Desktop/Hospital_Management_System/HospitalApp/HospitalApp/Areas/Admin/Views/Home/EditDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxFZGl0RG9jdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/2369954/OneDrive - Cognizant/Desktop/Hospital_Management_System/HospitalApp/HospitalApp/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/2369954/OneDrive - Cognizant/Desktop/Hospital_Management_System/HospitalApp/HospitalApp/Areas/Admin/Views/Home/ViewAppointments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxWaWV3QXBwb2ludG1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/2369954/OneDrive - Cognizant/Desktop/Hospital_Management_System/HospitalApp/HospitalApp/Areas/Admin/Views/Home/ViewDoctors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxWaWV3RG9jdG9ycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/2369954/OneDrive - Cognizant/Desktop/Hospital_Management_System/HospitalApp/HospitalApp/Areas/Admin/Views/Home/ViewPatients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxWaWV3UGF0aWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/2369954/OneDrive - Cognizant/Desktop/Hospital_Management_System/HospitalApp/HospitalApp/Areas/Admin/Views/_ViewImports.cshtml]

@@ -21,11 +21,11 @@ namespace HospitalApp.Models
 
         [Required, MaxLength(200)]
         public string Qualifications { get; set; }
-        public string userId { get; set; }
-        //[ForeignKey("userId")]
-        //[ValidateNever]
-        //public IdentityUser User { get; set; }
+        public string UserId { get; set; }
+        [ForeignKey("UserId")]
+        [ValidateNever]
+        public ApplicationUser? User { get; set; }
 
-        //public virtual List<Appointment> Appointments { get; set; }
+        public List<Appointment> Appointments { get; set; }
     }
 }
