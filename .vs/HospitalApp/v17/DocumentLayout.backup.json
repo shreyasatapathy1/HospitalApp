@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\data\\migrations\\20250116091531_tables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\data\\migrations\\20250116091531_tables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250116090709_patient,appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HospitalApp\\Data\\Migrations\\20250116090709_patient,appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\areas\\admin\\views\\home\\viewdoctors.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\home\\viewdoctors.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\areas\\admin\\views\\home\\adddoctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\home\\adddoctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\2369954\\onedrive - cognizant\\desktop\\hospital_management_system\\hospitalapp\\hospitalapp\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,112 +22,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 241,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20250116091531_tables.cs",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250116091531_tables.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Data\\Migrations\\20250116091531_tables.cs",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250116091531_tables.cs",
-              "RelativeToolTip": "HospitalApp\\Data\\Migrations\\20250116091531_tables.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T09:15:31.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "HospitalApp\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T09:08:21.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20250116090709_patient,appointment.cs",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250116090709_patient,appointment.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Data\\Migrations\\20250116090709_patient,appointment.cs",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250116090709_patient,appointment.cs",
-              "RelativeToolTip": "HospitalApp\\Data\\Migrations\\20250116090709_patient,appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T09:07:09.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Models\\ApplicationUser.cs*",
-              "RelativeToolTip": "HospitalApp\\Models\\ApplicationUser.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAIwAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T08:59:38.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ViewDoctors.cshtml",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Home\\ViewDoctors.cshtml",
-              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\Home\\ViewDoctors.cshtml",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Home\\ViewDoctors.cshtml",
-              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\Home\\ViewDoctors.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAIwDAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T08:59:29.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddDoctor.cshtml",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Home\\AddDoctor.cshtml",
-              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\Home\\AddDoctor.cshtml",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Home\\AddDoctor.cshtml",
-              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\Home\\AddDoctor.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T08:59:14.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Models\\Appointment.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Models\\Appointment.cs",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Models\\Appointment.cs",
-              "RelativeToolTip": "HospitalApp\\Models\\Appointment.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T08:56:27.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Models\\Doctor.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Models\\Doctor.cs",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Models\\Doctor.cs",
-              "RelativeToolTip": "HospitalApp\\Models\\Doctor.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA3wBoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T08:55:12.078Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -162,15 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Models\\Patient.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Models\\Patient.cs",
-              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Models\\Patient.cs",
-              "RelativeToolTip": "HospitalApp\\Models\\Patient.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAkwBsAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAswDEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-17T05:04:51.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T08:51:31.643Z",
+              "WhenOpened": "2025-01-17T05:04:46.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAswC8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T13:14:29.799Z",
               "EditorCaption": ""
             }
           ]

@@ -8,10 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = $"/Identity/Account/Login";
+    options.LogoutPath= $"/Identity/Account/Logout";
+    options.AccessDeniedPath= $"/Identity/Account/AccessDenied";
+});
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 var app = builder.Build();
@@ -37,7 +43,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{area=Admin}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=Home}/{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

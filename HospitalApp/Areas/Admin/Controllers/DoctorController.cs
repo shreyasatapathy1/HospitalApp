@@ -1,14 +1,16 @@
 ﻿using HospitalApp.Data;
 using HospitalApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class HomeController : Controller
+    [Authorize(Roles = "Admin")]
+    public class DoctorController : Controller
     {
         private readonly ApplicationDbContext _db;
-        public HomeController(ApplicationDbContext db)
+        public DoctorController(ApplicationDbContext db)
         {
             _db = db;
         }
