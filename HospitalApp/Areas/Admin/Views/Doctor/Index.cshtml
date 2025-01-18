@@ -1,9 +1,13 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Admin Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome Admin</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>@ViewData["Title"]</h1>
+
+<div class="d-flex justify-content-center mt-5">
+    <a href="/Admin/Doctor/AddDoctor" class="btn btn-primary btn-lg mx-2">Add Doctor</a>
+    <a href="/Admin/Doctor/ViewDoctors" class="btn btn-success btn-lg mx-2">View Doctors List</a>
 </div>
+
+
 

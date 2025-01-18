@@ -105,9 +105,9 @@ namespace HospitalApp.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
-            public string? Role { get; set; }
-            [ValidateNever]
-            public IEnumerable<SelectListItem> RoleList { get; set; }
+            public string? Role { get; set; } = "Patient";
+            //[ValidateNever]
+            //public IEnumerable<SelectListItem> RoleList { get; set; }
 
         }
 
@@ -120,14 +120,14 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                 _roleManager.CreateAsync(new IdentityRole("Admin")).GetAwaiter().GetResult();
 
 
-            Input = new()
-            {
-                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
-                {
-                    Text = i,
-                    Value = i
-                })
-            };
+            //Input = new()
+            //{
+            //    RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
+            //    {
+            //        Text = i,
+            //        Value = i
+            //    })
+            //};
 
 
             ReturnUrl = returnUrl;
@@ -162,6 +162,7 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                     }
 
                     var userId = await _userManager.GetUserIdAsync(user);
+                    //Add code for patientModel Database .Address Details
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
