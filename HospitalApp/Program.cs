@@ -45,6 +45,17 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{area=Home}/{controller=Home}/{action=Index}/{id?}");
 
+// Add route for Admin and other areas
+//app.MapControllerRoute(
+//    name: "areas",
+//    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+//// Default route for non-area pages
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
 
 app.MapRazorPages();
 

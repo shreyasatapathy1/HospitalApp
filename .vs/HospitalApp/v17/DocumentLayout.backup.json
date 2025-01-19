@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\doctor\\editdoctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\doctor\\editdoctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\doctor\\viewdoctors.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\doctor\\viewdoctors.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\admindashboardview\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\admindashboardview\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\doctor\\deletedoctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\doctor\\deletedoctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\doctor\\adddoctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\doctor\\adddoctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\patient\\viewpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\patient\\viewpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,24 +55,12 @@
       "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\patient\\viewpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\patient\\viewpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalappproject\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\doctor\\viewdoctors.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\doctor\\viewdoctors.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 241,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,46 +78,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250119230517_AddPatientFieldsWithoutRole.cs",
-              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs",
-              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs",
-              "RelativeToolTip": "HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T23:05:17.66Z",
+              "DocumentIndex": 1,
+              "Title": "EditDoctor.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\EditDoctor.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\EditDoctor.cshtml",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\EditDoctor.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\EditDoctor.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-19T23:24:10.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAkwFoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "AddDoctor.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\AddDoctor.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\AddDoctor.cshtml",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\AddDoctor.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\AddDoctor.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwEAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-19T22:53:39.169Z",
+              "WhenOpened": "2025-01-19T23:18:13.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "20250119224702_AddPatientTable.cs",
-              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119224702_AddPatientTable.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Data\\Migrations\\20250119224702_AddPatientTable.cs",
-              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119224702_AddPatientTable.cs",
-              "RelativeToolTip": "HospitalApp\\Data\\Migrations\\20250119224702_AddPatientTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAwwFAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T22:47:02.799Z",
+              "WhenOpened": "2025-01-19T23:16:31.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\AdminDashboardView\\Index.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\AdminDashboardView\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\AdminDashboardView\\Index.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\AdminDashboardView\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-19T23:12:10.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "HospitalApp\\Data\\ApplicationDbContext.cs",
@@ -110,20 +143,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "ViewDoctors.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\ViewDoctors.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\ViewDoctors.cshtml",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\ViewDoctors.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\ViewDoctors.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADAAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-19T22:14:11.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Program.cs",
               "RelativeDocumentMoniker": "HospitalApp\\Program.cs",
               "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Program.cs",
               "RelativeToolTip": "HospitalApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-19T22:45:53.224Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "DeleteDoctor.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\DeleteDoctor.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\DeleteDoctor.cshtml",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\DeleteDoctor.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\DeleteDoctor.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-19T23:26:01.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250119224702_AddPatientTable.cs",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119224702_AddPatientTable.cs",
+              "RelativeDocumentMoniker": "HospitalApp\\Data\\Migrations\\20250119224702_AddPatientTable.cs",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119224702_AddPatientTable.cs",
+              "RelativeToolTip": "HospitalApp\\Data\\Migrations\\20250119224702_AddPatientTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T22:47:02.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-19T22:53:39.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "HospitalApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -136,28 +221,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20250119223546_AddPatientData.cs",
-              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs",
-              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs",
-              "RelativeToolTip": "HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T22:35:46.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "PatientController.cs",
-              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Controllers\\PatientController.cs",
-              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Controllers\\PatientController.cs",
-              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Controllers\\PatientController.cs",
-              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Controllers\\PatientController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Title": "20250119230517_AddPatientFieldsWithoutRole.cs",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs",
+              "RelativeDocumentMoniker": "HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs",
+              "RelativeToolTip": "HospitalApp\\Data\\Migrations\\20250119230517_AddPatientFieldsWithoutRole.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T22:33:16.745Z",
+              "WhenOpened": "2025-01-19T23:05:17.66Z",
               "EditorCaption": ""
             },
             {
@@ -175,15 +247,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ViewDoctors.cshtml",
-              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\ViewDoctors.cshtml",
-              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\ViewDoctors.cshtml",
-              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Doctor\\ViewDoctors.cshtml",
-              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\Doctor\\ViewDoctors.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-19T22:14:11.372Z",
+              "DocumentIndex": 13,
+              "Title": "20250119223546_AddPatientData.cs",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs",
+              "RelativeDocumentMoniker": "HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs",
+              "RelativeToolTip": "HospitalApp\\Data\\Migrations\\20250119223546_AddPatientData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T22:35:46.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Controllers\\PatientController.cs",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalAppProject\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T22:33:16.745Z",
               "EditorCaption": ""
             }
           ]

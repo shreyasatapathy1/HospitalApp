@@ -44,12 +44,12 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Qualifications)
                 </td>
-                
+
                 <td>
-                    <a asp-action="EditDoctor" asp-route-id="@item.Id">Edit</a> |
-                    
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="EditDoctor" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="DeleteDoctor" asp-route-id="@item.Id">Delete</a>
                 </td>
+
             </tr>
         }
     </tbody>

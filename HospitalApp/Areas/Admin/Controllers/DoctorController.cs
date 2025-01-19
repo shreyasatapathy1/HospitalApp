@@ -20,44 +20,41 @@ namespace HospitalApp.Areas.Admin.Controllers
             _db = db;
             _userManager = userManager;
         }
+
         public IActionResult Index()
         {
-            return View();
+            return View("~/Areas/Admin/Views/AdminDashboardView/Index.cshtml");
         }
+
         public IActionResult ViewDoctors()
         {
             var doctorList = _db.Doctors.Include(d => d.User).ToList();
             return View(doctorList);
         }
 
-
-
         public IActionResult AddDoctor()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> AddDoctor(CreateDoctorViewModel model)
         {
             if (ModelState.IsValid)
             {
-                // Create User in Identity
                 var user = new ApplicationUser
                 {
                     UserName = model.Email,
                     Email = model.Email,
                     PhoneNumber = model.PhoneNumber,
-                    Name = model.Name // Assigning the Name property
-                    
+                    Name = model.Name
                 };
                 var result = await _userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
                 {
-                    // Add user to Doctor role
                     await _userManager.AddToRoleAsync(user, "Doctor");
 
-                    // Add details to Doctors table
                     var doctor = new Models.Doctor
                     {
                         UserId = user.Id,
@@ -68,7 +65,7 @@ namespace HospitalApp.Areas.Admin.Controllers
                     _db.Doctors.Add(doctor);
                     await _db.SaveChangesAsync();
 
-                    return RedirectToAction(nameof(Index)); // Redirect to a list of doctors or another page
+                    return RedirectToAction(nameof(ViewDoctors));
                 }
                 else
                 {
@@ -82,14 +79,82 @@ namespace HospitalApp.Areas.Admin.Controllers
         }
 
         
+        // GET: Edit Doctor
+        public IActionResult EditDoctor(int id)
+        {
+            var doctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == id);
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+
+            var model = new CreateDoctorViewModel
+            {
+                Email = doctor.User.Email,
+                Name = doctor.User.Name,
+                PhoneNumber = doctor.User.PhoneNumber,
+                Specialization = doctor.Specialty,
+                Qualification = doctor.Qualifications,
+                ExperienceInYears = doctor.ExperienceInYears
+            };
+
+            return View(model);
+        }
+
+        // POST: Edit Doctor
+        [HttpPost]
+        public async Task<IActionResult> EditDoctor(int id, CreateDoctorViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var doctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == id);
+                if (doctor == null)
+                {
+                    return NotFound();
+                }
+
+                doctor.User.Email = model.Email;
+                doctor.User.Name = model.Name;
+                doctor.User.PhoneNumber = model.PhoneNumber;
+                doctor.Specialty = model.Specialization;
+                doctor.Qualifications = model.Qualification;
+                doctor.ExperienceInYears = model.ExperienceInYears;
+
+                _db.Doctors.Update(doctor);
+                await _db.SaveChangesAsync();
+
+                return RedirectToAction(nameof(ViewDoctors));
+            }
+
+            return View(model);
+        }
 
 
+        // GET: Delete Doctor
+        public IActionResult DeleteDoctor(int id)
+        {
+            var doctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == id);
+            if (doctor == null)
+            {
+                return NotFound();
+            }
+            return View(doctor);
+        }
 
+        [HttpPost, ActionName("DeleteDoctor")]
+        public async Task<IActionResult> DeleteDoctorConfirmed(int id)
+        {
+            var doctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == id);
+            if (doctor == null)
+            {
+                return NotFound();
+            }
 
+            _db.Doctors.Remove(doctor);
+            _db.Users.Remove(doctor.User); // Remove associated identity user
+            await _db.SaveChangesAsync();
 
-
-
-
-
+            return RedirectToAction(nameof(ViewDoctors));
+        }
     }
 }
