@@ -83,42 +83,39 @@ namespace HospitalApp.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
 
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
-            public string? Role { get; set; } = "Patient";
-            //[ValidateNever]
-            //public IEnumerable<SelectListItem> RoleList { get; set; }
-
             [Required]
             public string? Name { get; set; }
+
             public string? PhoneNumber { get; set; }
+
+            [Required]
+            [Range(1, 120, ErrorMessage = "Age must be between 1 and 120.")]
+            public int Age { get; set; }
+
+            [Required]
+            [Range(1, 500, ErrorMessage = "Weight must be between 1 and 500 kg.")]
+            public float Weight { get; set; }
+
+            [MaxLength(1000)]
+            public string History { get; set; }
         }
+
 
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -163,49 +160,23 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    if (!String.IsNullOrEmpty(Input.Role))
-                    {
-                        await _userManager.AddToRoleAsync(user, Input.Role);
-                    }
-                    else
-                    {
-                        await _userManager.AddToRoleAsync(user, "Patient");
-                    }
+                    // Assign default role (if required)
+                    await _userManager.AddToRoleAsync(user, "Patient");
 
-                    // Add Patient details to Patients table
-                    if (Input.Role == "Patient")
+                    // Add patient details to Patients table
+                    var patient = new Models.Patient
                     {
-                        var patient = new Models.Patient
-                        {
-                            UserId = user.Id,
-                            Age = 0,  // Default, can be updated later
-                            Weight = 0,  // Default, can be updated later
-                            History = "No history provided"
-                        };
+                        UserId = user.Id,
+                        Age = Input.Age,
+                        Weight = Input.Weight,
+                        History = Input.History
+                    };
 
-                        _dbContext.Patients.Add(patient);
-                        await _dbContext.SaveChangesAsync();
-                    }
+                    _dbContext.Patients.Add(patient);
+                    await _dbContext.SaveChangesAsync();
 
-
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-                    }
-                    else
-                    {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
-                    }
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return LocalRedirect(returnUrl);
                 }
 
                 foreach (var error in result.Errors)
@@ -216,6 +187,7 @@ namespace HospitalApp.Areas.Identity.Pages.Account
 
             return Page();
         }
+
 
 
         private ApplicationUser CreateUser()
