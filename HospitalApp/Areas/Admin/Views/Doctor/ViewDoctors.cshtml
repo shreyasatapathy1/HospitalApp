@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<HospitalApp.Models.Doctor>
 
 @{
-    ViewData["Title"] = "ViewDoctors";
+    ViewData["Title"] = "View Doctors";
 }
 
-<h1>ViewDoctors</h1>
+<h1>View Doctors</h1>
 
 <p>
     <a asp-action="AddDoctor">Create New</a>
@@ -13,47 +13,44 @@
     <thead>
         <tr>
             <th>
+                Name
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Specialty)
             </th>
-            @* <th> *@
-            @*     @Html.DisplayNameFor(model => model.ContactNumber) *@
-            @* </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.ExperienceInYears)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Qualifications)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>
+            
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Specialty)
-            </td>
-            @* <td> *@
-            @*     @Html.DisplayFor(modelItem => item.ContactNumber) *@
-            @* </td> *@
-            <td>
-                @Html.DisplayFor(modelItem => item.ExperienceInYears)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Qualifications)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.User?.Name <!-- Display the Name property of ApplicationUser -->
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Specialty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExperienceInYears)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qualifications)
+                </td>
+                
+                <td>
+                    <a asp-action="EditDoctor" asp-route-id="@item.Id">Edit</a> |
+                    
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

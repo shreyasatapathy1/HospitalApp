@@ -1,0 +1,31 @@
+﻿@model IEnumerable<HospitalApp.Models.Patient>
+
+@{
+    ViewData["Title"] = "View Patients";
+}
+
+<h1>View Patients</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>@Html.DisplayNameFor(model => model.Age)</th>
+            <th>Phone Number</th>
+            <th>@Html.DisplayNameFor(model => model.Weight)</th>
+            <th>@Html.DisplayNameFor(model => model.History)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patient in Model)
+        {
+            <tr>
+                <td>@patient.User?.Name</td>
+                <td>@patient.Age</td>
+                <td>@patient.User?.PhoneNumber</td>
+                <td>@patient.Weight</td>
+                <td>@patient.History</td>
+            </tr>
+        }
+    </tbody>
+</table>

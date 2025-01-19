@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using HospitalApp.Data;
 using HospitalApp.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -20,6 +21,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using static System.Net.Mime.MediaTypeNames;
@@ -36,12 +38,15 @@ namespace HospitalApp.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         //private readonly IEmailSender _emailSender;
 
+        private readonly ApplicationDbContext _dbContext;
+
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
-            ILogger<RegisterModel> logger)
+            ILogger<RegisterModel> logger,
+            ApplicationDbContext dbContext)
         {
             _userManager = userManager;
             _roleManager = roleManager;
@@ -49,8 +54,9 @@ namespace HospitalApp.Areas.Identity.Pages.Account
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
-            
+            _dbContext = dbContext;
         }
+
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -109,6 +115,9 @@ namespace HospitalApp.Areas.Identity.Pages.Account
             //[ValidateNever]
             //public IEnumerable<SelectListItem> RoleList { get; set; }
 
+            [Required]
+            public string? Name { get; set; }
+            public string? PhoneNumber { get; set; }
         }
 
 
@@ -138,31 +147,48 @@ namespace HospitalApp.Areas.Identity.Pages.Account
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+
+                user.Name = Input.Name;
+                user.PhoneNumber = Input.PhoneNumber;
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
-
                     _logger.LogInformation("User created a new account with password.");
 
                     if (!String.IsNullOrEmpty(Input.Role))
                     {
                         await _userManager.AddToRoleAsync(user, Input.Role);
-
                     }
                     else
                     {
                         await _userManager.AddToRoleAsync(user, "Patient");
                     }
 
+                    // Add Patient details to Patients table
+                    if (Input.Role == "Patient")
+                    {
+                        var patient = new Models.Patient
+                        {
+                            UserId = user.Id,
+                            Age = 0,  // Default, can be updated later
+                            Weight = 0,  // Default, can be updated later
+                            History = "No history provided"
+                        };
+
+                        _dbContext.Patients.Add(patient);
+                        await _dbContext.SaveChangesAsync();
+                    }
+
+
                     var userId = await _userManager.GetUserIdAsync(user);
-                    //Add code for patientModel Database .Address Details
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
@@ -170,9 +196,6 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                         pageHandler: null,
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
-
-                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
@@ -184,15 +207,16 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                         return LocalRedirect(returnUrl);
                     }
                 }
+
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
 
-            // If we got this far, something failed, redisplay form
             return Page();
         }
+
 
         private ApplicationUser CreateUser()
         {

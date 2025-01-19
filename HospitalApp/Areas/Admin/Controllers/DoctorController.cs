@@ -26,22 +26,17 @@ namespace HospitalApp.Areas.Admin.Controllers
         }
         public IActionResult ViewDoctors()
         {
-            List<Models.Doctor> doctorList = _db.Doctors.ToList();
+            var doctorList = _db.Doctors.Include(d => d.User).ToList();
             return View(doctorList);
         }
+
+
+
         public IActionResult AddDoctor()
         {
             return View();
         }
         [HttpPost]
-
-        //public IActionResult AddDoctor(Models.Doctor obj)
-        //{
-        //    _db.Doctors.Add(obj);
-        //    _db.SaveChanges();
-        //    return RedirectToAction("ViewDoctors");
-
-        //}
         public async Task<IActionResult> AddDoctor(CreateDoctorViewModel model)
         {
             if (ModelState.IsValid)
@@ -85,7 +80,16 @@ namespace HospitalApp.Areas.Admin.Controllers
             }
             return View(model);
         }
-    
+
+        
+
+
+
+
+
+
+
+
 
     }
 }
