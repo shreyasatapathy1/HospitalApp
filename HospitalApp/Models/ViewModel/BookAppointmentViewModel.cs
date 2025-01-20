@@ -14,12 +14,10 @@ namespace HospitalApp.Models.ViewModel
         [Display(Name = "Select Doctor")]
         public int DoctorId { get; set; }
 
-        public List<Doctor> AvailableDoctors { get; set; }
-
         [Required]
         [DataType(DataType.Date)]
         [Display(Name = "Appointment Date")]
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;//Ensure your BookAppointmentViewModel uses DateTime for the date input, as HTML date inputs work with DateTime
 
         [Required]
         [Display(Name = "Time Slot")]

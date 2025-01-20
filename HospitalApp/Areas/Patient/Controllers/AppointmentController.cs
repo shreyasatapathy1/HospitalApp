@@ -20,10 +20,7 @@ namespace HospitalApp.Areas.Patient.Controllers
             _userManager = userManager;
         }
 
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        
 
         public IActionResult BookAppointment()
         {
@@ -49,7 +46,7 @@ namespace HospitalApp.Areas.Patient.Controllers
                 {
                     DoctorId = model.DoctorId,
                     PatientId = patient.Id,
-                    Date = model.Date,
+                    Date = DateOnly.FromDateTime(model.Date), // Convert DateTime to DateOnly,
                     TimeSlot = model.TimeSlot,
                     PaymentMethod = model.PaymentMethod,
                     Notes = model.Notes,
@@ -73,7 +70,10 @@ namespace HospitalApp.Areas.Patient.Controllers
 
         public JsonResult GetDoctorsBySpecialization(string specialization)
         {
-            var doctors = _db.Doctors.Where(d => d.Specialty == specialization).ToList();
+            var doctors = _db.Doctors
+                             .Where(d => d.Specialty == specialization)
+                             .Select(d => new { d.Id, d.User.Name })
+                             .ToList();
             return Json(doctors);
         }
     }

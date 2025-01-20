@@ -11,9 +11,14 @@
         <label asp-for="Specialization"></label>
         <select asp-for="Specialization" class="form-control" id="specialization">
             <option value="">-- Select Specialization --</option>
+            <option>Dentist</option>
             <option>Cardiologist</option>
             <option>Neurologist</option>
             <option>Orthopedic</option>
+            <option>ENT</option>
+            <option>Oncologist</option>
+            <option>Gynecologist</option>
+            <option>Medicine Specialist</option>
         </select>
     </div>
 
@@ -26,7 +31,7 @@
 
     <div class="form-group">
         <label asp-for="Date"></label>
-        <input asp-for="Date" class="form-control" type="date" />
+        <input asp-for="Date" class="form-control" type="date" value="@Model.Date.ToString("yyyy-MM-dd")" />
     </div>
 
     <div class="form-group">
@@ -64,10 +69,14 @@
                 var specialization = $(this).val();
                 $.getJSON('/Patient/Appointment/GetDoctorsBySpecialization', { specialization: specialization }, function (data) {
                     $('#doctorDropdown').empty();
+                    $('#doctorDropdown').append($('<option>', {
+                        value: '',
+                        text: '-- Select Doctor --'
+                    }));
                     $.each(data, function (i, doctor) {
                         $('#doctorDropdown').append($('<option>', {
                             value: doctor.id,
-                            text: doctor.user.name
+                            text: doctor.name
                         }));
                     });
                 });

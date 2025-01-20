@@ -27,7 +27,7 @@ namespace HospitalApp.Models
         
         [ValidateNever]
         public ApplicationUser? User { get; set; }
-
+        [ValidateNever]
         public List<Appointment> Appointments { get; set; }
     }
 }

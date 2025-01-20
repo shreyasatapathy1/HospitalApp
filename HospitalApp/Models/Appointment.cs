@@ -19,7 +19,7 @@ public class Appointment
     public Patient Patient { get; set; }
 
     [Required]
-    public DateTime Date { get; set; }
+    public DateOnly Date { get; set; }
 
     [Required]
     public string TimeSlot { get; set; }  // New property for booking slot
