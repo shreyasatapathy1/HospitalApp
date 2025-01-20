@@ -78,7 +78,8 @@ namespace HospitalApp.Areas.Admin.Controllers
             return View(model);
         }
 
-        
+
+       
         // GET: Edit Doctor
         public IActionResult EditDoctor(int id)
         {
@@ -87,47 +88,39 @@ namespace HospitalApp.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
-            var model = new CreateDoctorViewModel
-            {
-                Email = doctor.User.Email,
-                Name = doctor.User.Name,
-                PhoneNumber = doctor.User.PhoneNumber,
-                Specialization = doctor.Specialty,
-                Qualification = doctor.Qualifications,
-                ExperienceInYears = doctor.ExperienceInYears
-            };
-
-            return View(model);
+            return View(doctor);
         }
 
         // POST: Edit Doctor
         [HttpPost]
-        public async Task<IActionResult> EditDoctor(int id, CreateDoctorViewModel model)
+        public async Task<IActionResult> EditDoctor(Models.Doctor doctor)
         {
             if (ModelState.IsValid)
             {
-                var doctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == id);
-                if (doctor == null)
+                var existingDoctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == doctor.Id);
+                if (existingDoctor == null)
                 {
                     return NotFound();
                 }
 
-                doctor.User.Email = model.Email;
-                doctor.User.Name = model.Name;
-                doctor.User.PhoneNumber = model.PhoneNumber;
-                doctor.Specialty = model.Specialization;
-                doctor.Qualifications = model.Qualification;
-                doctor.ExperienceInYears = model.ExperienceInYears;
+                // Update User fields
+                existingDoctor.User.Email = doctor.User.Email;
+                existingDoctor.User.Name = doctor.User.Name;
+                existingDoctor.User.PhoneNumber = doctor.User.PhoneNumber;
 
-                _db.Doctors.Update(doctor);
+                // Update Doctor fields
+                existingDoctor.Specialty = doctor.Specialty;
+                existingDoctor.Qualifications = doctor.Qualifications;
+                existingDoctor.ExperienceInYears = doctor.ExperienceInYears;
+
+                _db.Doctors.Update(existingDoctor);
                 await _db.SaveChangesAsync();
 
                 return RedirectToAction(nameof(ViewDoctors));
             }
-
-            return View(model);
+            return View(doctor);
         }
+
 
 
         // GET: Delete Doctor

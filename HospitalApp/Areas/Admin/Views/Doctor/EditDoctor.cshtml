@@ -1,4 +1,4 @@
-﻿@model HospitalApp.Models.ViewModel.CreateDoctorViewModel
+﻿@model HospitalApp.Models.Doctor
 
 @{
     ViewData["Title"] = "Edit Doctor";
@@ -7,34 +7,36 @@
 <h2>Edit Doctor</h2>
 
 <form asp-action="EditDoctor" method="post">
+    <input type="hidden" asp-for="Id" />
+
     <div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
+        <label asp-for="User.Email" class="control-label"></label>
+        <input asp-for="User.Email" class="form-control" />
+        <span asp-validation-for="User.Email" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+        <label asp-for="User.Name" class="control-label"></label>
+        <input asp-for="User.Name" class="form-control" />
+        <span asp-validation-for="User.Name" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="PhoneNumber" class="control-label"></label>
-        <input asp-for="PhoneNumber" class="form-control" />
-        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        <label asp-for="User.PhoneNumber" class="control-label"></label>
+        <input asp-for="User.PhoneNumber" class="form-control" />
+        <span asp-validation-for="User.PhoneNumber" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Specialization" class="control-label"></label>
-        <input asp-for="Specialization" class="form-control" />
-        <span asp-validation-for="Specialization" class="text-danger"></span>
+        <label asp-for="Specialty" class="control-label"></label>
+        <input asp-for="Specialty" class="form-control" />
+        <span asp-validation-for="Specialty" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Qualification" class="control-label"></label>
-        <input asp-for="Qualification" class="form-control" />
-        <span asp-validation-for="Qualification" class="text-danger"></span>
+        <label asp-for="Qualifications" class="control-label"></label>
+        <input asp-for="Qualifications" class="form-control" />
+        <span asp-validation-for="Qualifications" class="text-danger"></span>
     </div>
 
     <div class="form-group">

@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalApp.Areas.Patient.Controllers
 {
+    [Area("Patient")]
+    [Authorize(Roles = "Patient")]
     public class HomeController : Controller
     {
-        [Area("Patient")]
         public IActionResult Index()
         {
             return View();
