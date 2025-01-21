@@ -1,4 +1,5 @@
 ﻿using HospitalApp.Data;
+using HospitalApp.Data.Repository;
 using HospitalApp.Models;
 using HospitalApp.Models.ViewModel;
 using Microsoft.AspNetCore.Authorization;
@@ -12,24 +13,19 @@ namespace HospitalApp.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class DoctorController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly IDoctorRepository _doctorRepository;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public DoctorController(ApplicationDbContext db, UserManager<IdentityUser> userManager)
+        public DoctorController(IDoctorRepository doctorRepository, UserManager<IdentityUser> userManager)
         {
-            _db = db;
+            _doctorRepository = doctorRepository;
             _userManager = userManager;
-        }
-
-        public IActionResult Index()
-        {
-            return View("~/Areas/Admin/Views/AdminDashboardView/Index.cshtml");
         }
 
         public IActionResult ViewDoctors()
         {
-            var doctorList = _db.Doctors.Include(d => d.User).ToList();
-            return View(doctorList);
+            var doctors = _doctorRepository.GetAll();
+            return View(doctors);
         }
 
         public IActionResult AddDoctor()
@@ -62,8 +58,7 @@ namespace HospitalApp.Areas.Admin.Controllers
                         Qualifications = model.Qualification,
                         ExperienceInYears = model.ExperienceInYears
                     };
-                    _db.Doctors.Add(doctor);
-                    await _db.SaveChangesAsync();
+                    _doctorRepository.Add(doctor);
 
                     return RedirectToAction(nameof(ViewDoctors));
                 }
@@ -78,12 +73,9 @@ namespace HospitalApp.Areas.Admin.Controllers
             return View(model);
         }
 
-
-       
-        // GET: Edit Doctor
         public IActionResult EditDoctor(int id)
         {
-            var doctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == id);
+            var doctor = _doctorRepository.GetById(id);
             if (doctor == null)
             {
                 return NotFound();
@@ -91,42 +83,39 @@ namespace HospitalApp.Areas.Admin.Controllers
             return View(doctor);
         }
 
-        // POST: Edit Doctor
         [HttpPost]
         public async Task<IActionResult> EditDoctor(Models.Doctor doctor)
         {
             if (ModelState.IsValid)
             {
-                var existingDoctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == doctor.Id);
+                var existingDoctor = _doctorRepository.GetById(doctor.Id);
                 if (existingDoctor == null)
                 {
                     return NotFound();
                 }
-
                 // Update User fields
-                existingDoctor.User.Email = doctor.User.Email;
-                existingDoctor.User.Name = doctor.User.Name;
-                existingDoctor.User.PhoneNumber = doctor.User.PhoneNumber;
+                var user = await _userManager.FindByIdAsync(existingDoctor.UserId) as ApplicationUser;
+                user.Email = doctor.User.Email;
+                user.Name = doctor.User.Name;
+
+                user.PhoneNumber = doctor.User.PhoneNumber;
+                await _userManager.UpdateAsync(user);
 
                 // Update Doctor fields
                 existingDoctor.Specialty = doctor.Specialty;
                 existingDoctor.Qualifications = doctor.Qualifications;
                 existingDoctor.ExperienceInYears = doctor.ExperienceInYears;
 
-                _db.Doctors.Update(existingDoctor);
-                await _db.SaveChangesAsync();
+                _doctorRepository.Update(existingDoctor);
 
                 return RedirectToAction(nameof(ViewDoctors));
             }
             return View(doctor);
         }
-
-
-
-        // GET: Delete Doctor
+        
         public IActionResult DeleteDoctor(int id)
         {
-            var doctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == id);
+            var doctor = _doctorRepository.GetById(id);
             if (doctor == null)
             {
                 return NotFound();
@@ -137,15 +126,15 @@ namespace HospitalApp.Areas.Admin.Controllers
         [HttpPost, ActionName("DeleteDoctor")]
         public async Task<IActionResult> DeleteDoctorConfirmed(int id)
         {
-            var doctor = _db.Doctors.Include(d => d.User).FirstOrDefault(d => d.Id == id);
+            var doctor = _doctorRepository.GetById(id);
             if (doctor == null)
             {
                 return NotFound();
             }
 
-            _db.Doctors.Remove(doctor);
-            _db.Users.Remove(doctor.User); // Remove associated identity user
-            await _db.SaveChangesAsync();
+            var user = await _userManager.FindByIdAsync(doctor.UserId);
+            _doctorRepository.Delete(doctor);
+            await _userManager.DeleteAsync(user);
 
             return RedirectToAction(nameof(ViewDoctors));
         }
