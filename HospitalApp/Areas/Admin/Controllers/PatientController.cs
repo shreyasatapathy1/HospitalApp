@@ -1,6 +1,8 @@
 ﻿using HospitalApp.Data;
+using HospitalApp.Data.Repository;
 using HospitalApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,16 +12,17 @@ namespace HospitalApp.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class PatientController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly IPatientRepository _patientRepository;
 
-        public PatientController(ApplicationDbContext db)
+        public PatientController(IPatientRepository patientRepository)
         {
-            _db = db;
+            _patientRepository = patientRepository;
+            
         }
 
         public IActionResult ViewPatients()
         {
-            var patients = _db.Patients.Include(p => p.User).ToList();
+            var patients = _patientRepository.GetAll();
             return View(patients);
         }
     }

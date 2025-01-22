@@ -1,9 +1,59 @@
-﻿@{
+﻿@* @{ *@
+@*     ViewData["Title"] = "Patient Dashboard"; *@
+@* } *@
+
+@* <h1>Welcome to Patient Dashboard</h1> *@
+
+@* <p> *@
+@*     <a href="/Patient/Appointment/BookAppointment" class="btn btn-primary">Book Appointment</a> *@
+@* </p> *@
+
+@{
     ViewData["Title"] = "Patient Dashboard";
 }
 
-<h1>Welcome to Patient Dashboard</h1>
+<h1 class="text-center my-4">Welcome to Patient Dashboard</h1>
 
-<p>
-    <a href="/Patient/Appointment/BookAppointment" class="btn btn-primary">Book Appointment</a>
-</p>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+            <div class="card text-center shadow-lg border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Book Appointment</h5>
+                    <p class="card-text">Schedule a new appointment with a doctor.</p>
+                    <a href="/Patient/Appointment/BookAppointment" class="btn btn-success btn-lg">
+                        <i class="bi bi-calendar-plus"></i> Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 text-center">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+<style>
+    body {
+        background: url('') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .card-title {
+        font-weight: bold;
+    }
+
+    .btn-lg {
+        width: 100%;
+    }
+</style>

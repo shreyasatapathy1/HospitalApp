@@ -35,6 +35,7 @@ namespace HospitalApp.Models.ViewModel
         [Display(Name = "Qualification")]
         public string Qualification { get; set; }
         [Required, Range(1, 50)]
+        [Display(Name = "Experience In Years")]
         public int ExperienceInYears { get; set; }
 
         [Display(Name = "Phone Number")]

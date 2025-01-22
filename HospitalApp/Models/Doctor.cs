@@ -13,9 +13,6 @@ namespace HospitalApp.Models
         [Required, MaxLength(100)]
         public string Specialty { get; set; } // Category (e.g., Cardiologist)
 
-        //[Required, Phone]
-        //public string ContactNumber { get; set; }
-
         [Required, Range(1, 50)]
         public int ExperienceInYears { get; set; }
 

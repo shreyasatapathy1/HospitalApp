@@ -1,11 +1,84 @@
-﻿﻿@{
+﻿@* ﻿@{ *@
+@*     ViewData["Title"] = "Admin Dashboard"; *@
+@* } *@
+
+@* <h1>@ViewData["Title"]</h1> *@
+
+@* <div class="d-flex justify-content-center mt-5"> *@
+@*     <a href="/Admin/Doctor/AddDoctor" class="btn btn-primary btn-lg mx-2">Add Doctor</a> *@
+@*     <a href="/Admin/Doctor/ViewDoctors" class="btn btn-success btn-lg mx-2">View Doctors List</a> *@
+@*     <a href="/Admin/Patient/ViewPatients" class="btn btn-info btn-lg mx-2">View Patients</a> *@
+@* </div> *@
+
+
+@{
     ViewData["Title"] = "Admin Dashboard";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="text-center my-4">@ViewData["Title"]</h1>
 
-<div class="d-flex justify-content-center mt-5">
-    <a href="/Admin/Doctor/AddDoctor" class="btn btn-primary btn-lg mx-2">Add Doctor</a>
-    <a href="/Admin/Doctor/ViewDoctors" class="btn btn-success btn-lg mx-2">View Doctors List</a>
-    <a href="/Admin/Patient/ViewPatients" class="btn btn-info btn-lg mx-2">View Patients</a>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+            <div class="card text-center shadow-lg border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Add Doctor</h5>
+                    <p class="card-text">Add new doctors to the system.</p>
+                    <a href="/Admin/Doctor/AddDoctor" class="btn btn-primary btn-lg">
+                        <i class="bi bi-person-plus"></i> Add Doctor
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card text-center shadow-lg border-0">
+                <div class="card-body">
+                    <h5 class="card-title">View Doctors List</h5>
+                    <p class="card-text">View and manage the list of doctors.</p>
+                    <a href="/Admin/Doctor/ViewDoctors" class="btn btn-success btn-lg">
+                        <i class="bi bi-list-ul"></i> View Doctors List
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card text-center shadow-lg border-0">
+                <div class="card-body">
+                    <h5 class="card-title">View Patients</h5>
+                    <p class="card-text">View and manage the list of patients.</p>
+                    <a href="/Admin/Patient/ViewPatients" class="btn btn-info btn-lg">
+                        <i class="bi bi-people"></i> View Patients
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 text-center">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
 </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+<style>
+    body {
+        background: url('') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .card-title {
+        font-weight: bold;
+    }
+
+    .btn-lg {
+        width: 100%;
+    }
+</style>
