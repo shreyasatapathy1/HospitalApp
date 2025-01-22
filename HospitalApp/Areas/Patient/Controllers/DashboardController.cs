@@ -5,7 +5,7 @@ namespace HospitalApp.Areas.Patient.Controllers
 {
     [Area("Patient")]
     [Authorize(Roles = "Patient")]
-    public class HomeController : Controller
+    public class DashboardController : Controller
     {
         public IActionResult Index()
         {

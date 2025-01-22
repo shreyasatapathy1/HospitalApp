@@ -53,13 +53,13 @@
                             @if (User.IsInRole("Doctor"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Doctor" asp-controller="Home" asp-action="Index">Doctor </a>
+                                    <a class="nav-link text-dark" asp-area="Doctor" asp-controller="Dashboard" asp-action="Index">Doctor </a>
                                 </li>
                             }
                             @if (User.IsInRole("Patient"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Patient" asp-controller="Home" asp-action="Index">Patient </a>
+                                    <a class="nav-link text-dark" asp-area="Patient" asp-controller="Dashboard" asp-action="Index">Patient </a>
                                 </li>
                             }
                             <li class="nav-item">

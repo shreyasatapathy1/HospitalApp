@@ -123,11 +123,25 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                         var isAdmin = await _signInManager.UserManager.IsInRoleAsync(user, "Admin");
                         if (isAdmin)
                         {
-                            // Redirect Admins to Doctor Management Page
-                            return LocalRedirect(Url.Content("~/Admin/Doctor"));
+                            // Redirect Admins to Admin Dashboard Page
+                            return LocalRedirect(Url.Content("~/Admin/Dashboard"));
                         }
 
-                        // You can add additional role checks here if needed
+                        // Check if the user is an Doctor
+                        var isDoctor = await _signInManager.UserManager.IsInRoleAsync(user, "Doctor");
+                        if (isDoctor)
+                        {
+                            // Redirect Patients to Patient Dashboard Page
+                            return LocalRedirect(Url.Content("~/Doctor/Dashboard"));
+                        }
+
+                        // Check if the user is an Patient
+                        var isPatient = await _signInManager.UserManager.IsInRoleAsync(user, "Patient");
+                        if (isPatient)
+                        {
+                            // Redirect Patients to Patient Dashboard Page
+                            return LocalRedirect(Url.Content("~/Patient/Dashboard"));
+                        }
                     }
 
                     // If no role-based redirection, use the default returnUrl

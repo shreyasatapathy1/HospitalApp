@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ep2PPnB/t2s=",
+  "dgSpecHash": "ZTds+KLevIg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\New folder (2)\\HospitalApp\\HospitalApp\\HospitalApp.csproj",
+  "projectFilePath": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\HospitalApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\2369954\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\2369954\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

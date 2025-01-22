@@ -8364,11 +8364,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\New folder (2)\\HospitalApp\\HospitalApp\\HospitalApp.csproj",
+      "projectUniqueName": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\HospitalApp.csproj",
       "projectName": "HospitalApp",
-      "projectPath": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\New folder (2)\\HospitalApp\\HospitalApp\\HospitalApp.csproj",
+      "projectPath": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\HospitalApp.csproj",
       "packagesPath": "C:\\Users\\2369954\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\New folder (2)\\HospitalApp\\HospitalApp\\obj\\",
+      "outputPath": "C:\\Users\\2369954\\OneDrive - Cognizant\\Desktop\\Hospital_Management_System\\HospitalApp\\HospitalApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

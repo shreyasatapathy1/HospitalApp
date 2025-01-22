@@ -2,7 +2,7 @@
 
 namespace HospitalApp.Areas.Doctor.Controllers
 {
-    public class HomeController : Controller
+    public class DashboardController : Controller
     {
         [Area("Doctor")]
         public IActionResult Index()
