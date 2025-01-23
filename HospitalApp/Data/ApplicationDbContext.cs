@@ -16,6 +16,8 @@ namespace HospitalApp.Data
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
+        public DbSet<GenerateReport> GenerateReports { get; set; }
     
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
