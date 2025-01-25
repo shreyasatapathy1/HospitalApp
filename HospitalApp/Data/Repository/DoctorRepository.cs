@@ -20,6 +20,14 @@ namespace HospitalApp.Data.Repository
 
         }
 
+        public IEnumerable<Doctor> FindBySpecialization(string specialization)
+        {
+            return _context.Doctors
+                .Include(d => d.User)
+                .Where(d => d.Specialty == specialization)
+                .ToList();
+        }
+
 
 
 

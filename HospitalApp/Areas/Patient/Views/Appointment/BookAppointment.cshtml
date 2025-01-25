@@ -1,12 +1,100 @@
-﻿@model HospitalApp.Models.ViewModel.BookAppointmentViewModel
+﻿@* @model HospitalApp.Models.ViewModel.BookAppointmentViewModel *@
+
+@* @{ *@
+@*     ViewData["Title"] = "Book Appointment"; *@
+@* } *@
+
+@* <h2>Book an Appointment</h2> *@
+
+@* <form asp-action="BookAppointment" method="post"> *@
+@*     <div class="form-group"> *@
+@*         <label asp-for="Specialization"></label> *@
+@*         <select asp-for="Specialization" class="form-control" id="specialization"> *@
+@*             <option value="">-- Select Specialization --</option> *@
+@*             <option>Dentist</option> *@
+@*             <option>Cardiologist</option> *@
+@*             <option>Neurologist</option> *@
+@*             <option>Orthopedic</option> *@
+@*             <option>ENT</option> *@
+@*             <option>Oncologist</option> *@
+@*             <option>Gynecologist</option> *@
+@*             <option>Medicine Specialist</option> *@
+@*         </select> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="DoctorId"></label> *@
+@*         <select asp-for="DoctorId" class="form-control" id="doctorDropdown"> *@
+@*             <option value="">-- Select Doctor --</option> *@
+@*         </select> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Date"></label> *@
+@*         <input asp-for="Date" class="form-control" type="date" value="@Model.Date.ToString("yyyy-MM-dd")" /> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="TimeSlot"></label> *@
+@*         <select asp-for="TimeSlot" class="form-control"> *@
+@*             @foreach (var slot in Model.TimeSlotOptions) *@
+@*             { *@
+@*                 <option value="@slot">@slot</option> *@
+@*             } *@
+@*         </select> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="PaymentMethod"></label> *@
+@*         <select asp-for="PaymentMethod" class="form-control"> *@
+@*             @foreach (var payment in Model.PaymentOptions) *@
+@*             { *@
+@*                 <option value="@payment">@payment</option> *@
+@*             } *@
+@*         </select> *@
+@*     </div> *@
+
+@*     <div class="form-group"> *@
+@*         <label asp-for="Notes"></label> *@
+@*         <textarea asp-for="Notes" class="form-control"></textarea> *@
+@*     </div> *@
+@*     <hr /> *@
+@*     <button type="submit" class="btn btn-primary">Book Appointment</button> *@
+@* </form> *@
+
+@* @section Scripts { *@
+@*     <script> *@
+@*         $(document).ready(function () { *@
+@*             $('#specialization').change(function () { *@
+@*                 var specialization = $(this).val(); *@
+@*                 $.getJSON('/Patient/Appointment/GetDoctorsBySpecialization', { specialization: specialization }, function (data) { *@
+@*                     $('#doctorDropdown').empty(); *@
+@*                     $('#doctorDropdown').append($('<option>', { *@
+@*                         value: '', *@
+@*                         text: '-- Select Doctor --' *@
+@*                     })); *@
+@*                     $.each(data, function (i, doctor) { *@
+@*                         $('#doctorDropdown').append($('<option>', { *@
+@*                             value: doctor.id, *@
+@*                             text: doctor.name *@
+@*                         })); *@
+@*                     }); *@
+@*                 }); *@
+@*             }); *@
+@*         }); *@
+@*     </script> *@
+@* } *@
+@model HospitalApp.Models.ViewModel.BookAppointmentViewModel
 
 @{
-    ViewData["Title"] = "Book Appointment";
+    ViewData["Title"] = "Book an Appointment";
 }
 
 <h2>Book an Appointment</h2>
 
 <form asp-action="BookAppointment" method="post">
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
     <div class="form-group">
         <label asp-for="Specialization"></label>
         <select asp-for="Specialization" class="form-control" id="specialization">
@@ -20,6 +108,7 @@
             <option>Gynecologist</option>
             <option>Medicine Specialist</option>
         </select>
+        <span asp-validation-for="Specialization" class="text-danger"></span>
     </div>
 
     <div class="form-group">
@@ -27,21 +116,24 @@
         <select asp-for="DoctorId" class="form-control" id="doctorDropdown">
             <option value="">-- Select Doctor --</option>
         </select>
+        <span asp-validation-for="DoctorId" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="Date"></label>
-        <input asp-for="Date" class="form-control" type="date" value="@Model.Date.ToString("yyyy-MM-dd")" />
+        <input asp-for="Date" class="form-control" type="date" />
+        <span asp-validation-for="Date" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="TimeSlot"></label>
-        <select asp-for="TimeSlot" class="form-control">
+        <select asp-for="TimeSlot" class="form-control" id="timeSlotDropdown">
             @foreach (var slot in Model.TimeSlotOptions)
             {
                 <option value="@slot">@slot</option>
             }
         </select>
+        <span asp-validation-for="TimeSlot" class="text-danger"></span>
     </div>
 
     <div class="form-group">
@@ -52,13 +144,14 @@
                 <option value="@payment">@payment</option>
             }
         </select>
+        <span asp-validation-for="PaymentMethod" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="Notes"></label>
         <textarea asp-for="Notes" class="form-control"></textarea>
     </div>
-    <hr />
+
     <button type="submit" class="btn btn-primary">Book Appointment</button>
 </form>
 
@@ -68,17 +161,24 @@
             $('#specialization').change(function () {
                 var specialization = $(this).val();
                 $.getJSON('/Patient/Appointment/GetDoctorsBySpecialization', { specialization: specialization }, function (data) {
-                    $('#doctorDropdown').empty();
-                    $('#doctorDropdown').append($('<option>', {
-                        value: '',
-                        text: '-- Select Doctor --'
-                    }));
+                    $('#doctorDropdown').empty().append('<option value="">-- Select Doctor --</option>');
                     $.each(data, function (i, doctor) {
                         $('#doctorDropdown').append($('<option>', {
                             value: doctor.id,
                             text: doctor.name
                         }));
                     });
+                });
+            });
+
+            $('#doctorDropdown, #Date').change(function () {
+                var doctorId = $('#doctorDropdown').val();
+                var date = $('#Date').val();
+                var timeSlot = $('#timeSlotDropdown').val();
+                $.getJSON('/Patient/Appointment/CheckSlotAvailability', { doctorId, date, timeSlot }, function (response) {
+                    if (!response.isAvailable) {
+                        alert('Time slot is already booked. Please select another.');
+                    }
                 });
             });
         });

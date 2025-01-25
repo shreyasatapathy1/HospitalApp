@@ -27,9 +27,18 @@ namespace HospitalApp.Data.Repository
 
         public void Add(T entity)
         {
-            _dbSet.Add(entity);
-            _context.SaveChanges();
+            try
+            {
+                _dbSet.Add(entity);
+                _context.SaveChanges();
+                Console.WriteLine("Data saved successfully!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving data: {ex.Message}");
+            }
         }
+
 
         public void Update(T entity)
         {

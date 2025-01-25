@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HospitalApp.Migrations
 {
     /// <inheritdoc />
-    public partial class GenerateReportModel : Migration
+    public partial class MigrationErrorResolved : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
