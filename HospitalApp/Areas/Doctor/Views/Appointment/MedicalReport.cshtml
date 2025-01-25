@@ -1,0 +1,62 @@
+﻿@model HospitalApp.Models.ViewModel.MedicalReportViewModel
+
+@{
+    ViewData["Title"] = "Medical Report";
+}
+
+<h2>Generate Medical Report</h2>
+
+<form asp-action="MedicalReport" method="post">
+    <input type="hidden" asp-for="AppointmentId" />
+    <input type="hidden" asp-for="ReportId" />
+
+    <div class="form-group">
+        <label asp-for="PatientName"></label>
+        <input asp-for="PatientName" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Weight"></label>
+        <input asp-for="Weight" class="form-control" readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Issue"></label>
+        <input asp-for="Issue" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Symptoms"></label>
+        <textarea asp-for="Symptoms" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Diagnosis"></label>
+        <textarea asp-for="Diagnosis" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Prescription"></label>
+        <textarea asp-for="Prescription" class="form-control"></textarea>
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary">
+        @* @(Model.IsReportExisting ? "Edit Report" : "Generate Report") *@
+        Generate Report
+    </button>
+</form>

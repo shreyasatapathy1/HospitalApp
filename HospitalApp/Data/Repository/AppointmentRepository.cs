@@ -40,6 +40,15 @@ namespace HospitalApp.Data.Repository
                 .ToList();
         }
 
+        public Appointment GetAppointmentWithDetails(int appointmentId)
+        {
+            return _context.Appointments
+                .Include(a => a.Patient)
+                    .ThenInclude(p => p.User)
+                .FirstOrDefault(a => a.Id == appointmentId);
+        }
+
+
         public void UpdateStatus(int id, string status)
         {
             var appointment = _context.Appointments.Find(id);
@@ -55,10 +64,6 @@ namespace HospitalApp.Data.Repository
             return !_context.Appointments
                 .Any(a => a.DoctorId == doctorId && a.Date == date && a.TimeSlot == timeSlot);
         }
-
-
-        
-
 
     }
 }

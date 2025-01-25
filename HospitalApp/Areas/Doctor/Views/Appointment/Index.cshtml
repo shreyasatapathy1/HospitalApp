@@ -14,6 +14,7 @@
             <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().TimeSlot)</th>
             <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Status)</th>
             <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Notes)</th>
+            <th>Medical Report</th>
         </tr>
     </thead>
     <tbody>
@@ -25,6 +26,11 @@
                 <td>@appointment.TimeSlot</td>
                 <td>@appointment.Status</td>
                 <td>@appointment.Notes</td>
+                <td>
+                    <a asp-action="MedicalReport" asp-route-appointmentId="@appointment.Id" class="btn btn-info">
+                        View Report
+                    </a>
+                </td>
             </tr>
         }
     </tbody>
