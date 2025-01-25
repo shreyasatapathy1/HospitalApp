@@ -56,5 +56,9 @@ namespace HospitalApp.Data.Repository
                 .Any(a => a.DoctorId == doctorId && a.Date == date && a.TimeSlot == timeSlot);
         }
 
+
+        
+
+
     }
 }

@@ -10,5 +10,8 @@ namespace HospitalApp.Data.Repository
         IEnumerable<Appointment> GetAppointmentsByPatientId(int patientId);
         void UpdateStatus(int id, string status);
         bool IsSlotAvailable(int doctorId, DateOnly date, string timeSlot);
+
+        
+
     }
 }

@@ -1,0 +1,31 @@
+﻿@model HospitalApp.Models.ViewModel.DoctorAppointmentsViewModel
+
+@{
+    ViewData["Title"] = "My Appointments";
+}
+
+<h2 class="text-center my-4">Upcoming Appointments for Dr. @Model.DoctorName</h2>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Patient.User.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Date)</th>
+            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().TimeSlot)</th>
+            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Status)</th>
+            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Notes)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model.UpcomingAppointments)
+        {
+            <tr>
+                <td>@appointment.Patient.User.Name</td>
+                <td>@appointment.Date.ToString("dd-MM-yyyy")</td>
+                <td>@appointment.TimeSlot</td>
+                <td>@appointment.Status</td>
+                <td>@appointment.Notes</td>
+            </tr>
+        }
+    </tbody>
+</table>
