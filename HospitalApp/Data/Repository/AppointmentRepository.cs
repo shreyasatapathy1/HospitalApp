@@ -1,4 +1,5 @@
 ﻿using HospitalApp.Models;
+using HospitalApp.Models.ViewModel;
 using Microsoft.EntityFrameworkCore;
 
 namespace HospitalApp.Data.Repository
@@ -58,6 +59,27 @@ namespace HospitalApp.Data.Repository
                 _context.SaveChanges();
             }
         }
+
+
+        public IEnumerable<AdminAppointmentViewModel> GetAllAppointmentsWithDetails()
+        {
+            return _context.Appointments
+                .Include(a => a.Doctor).ThenInclude(d => d.User)
+                .Include(a => a.Patient).ThenInclude(p => p.User)
+                .Select(a => new AdminAppointmentViewModel
+                {
+                    AppointmentId = a.Id,
+                    PatientName = a.Patient.User != null ? a.Patient.User.Name : "Unknown",
+                    DoctorName = a.Doctor.User != null ? a.Doctor.User.Name : "Unknown",
+                    AppointmentDate = a.Date.ToDateTime(TimeOnly.MinValue),
+                    TimeSlot = a.TimeSlot,
+                    Status = a.Status,
+                    PaymentMethod = a.PaymentMethod,
+                    Issue = a.Notes ?? "N/A",
+                    MedicalHistory = a.Patient.History ?? "No history available"
+                }).ToList();
+        }
+
 
         public bool IsSlotAvailable(int doctorId, DateOnly date, string timeSlot)
         {

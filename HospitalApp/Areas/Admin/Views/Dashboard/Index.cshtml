@@ -1,15 +1,4 @@
-﻿@* ﻿@{ *@
-@*     ViewData["Title"] = "Admin Dashboard"; *@
-@* } *@
-
-@* <h1>@ViewData["Title"]</h1> *@
-
-@* <div class="d-flex justify-content-center mt-5"> *@
-@*     <a href="/Admin/Doctor/AddDoctor" class="btn btn-primary btn-lg mx-2">Add Doctor</a> *@
-@*     <a href="/Admin/Doctor/ViewDoctors" class="btn btn-success btn-lg mx-2">View Doctors List</a> *@
-@*     <a href="/Admin/Patient/ViewPatients" class="btn btn-info btn-lg mx-2">View Patients</a> *@
-@* </div> *@
-
+﻿@model IEnumerable<HospitalApp.Models.ViewModel.AdminAppointmentViewModel>
 
 @{
     ViewData["Title"] = "Admin Dashboard";
@@ -53,8 +42,49 @@
             </div>
         </div>
     </div>
-    <div class="mt-5 text-center">
-        <a href="/" class="btn btn-primary"><i class="bi bi-arrow-left"></i>Back to Home</a>
+
+   
+
+    <!-- View All Appointments Section -->
+    <h2 class="text-center my-4">All Appointments</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.First().AppointmentId)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().PatientName)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().DoctorName)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().AppointmentDate)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().TimeSlot)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Status)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().PaymentMethod)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Issue)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().MedicalHistory)</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var appointment in Model)
+                {
+                    <tr>
+                        <td>@appointment.AppointmentId</td>
+                        <td>@appointment.PatientName</td>
+                        <td>@appointment.DoctorName</td>
+                        <td>@appointment.AppointmentDate.ToString("dd-MM-yyyy")</td>
+                        <td>@appointment.TimeSlot</td>
+                        <td>@appointment.Status</td>
+                        <td>@appointment.PaymentMethod</td>
+                        <td>@appointment.Issue</td>
+                        <td>@appointment.MedicalHistory</td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="mt-5 text-center">
+            <a href="/" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Home</a>
+        </div>
     </div>
 </div>
 
@@ -80,5 +110,9 @@
 
     .btn-lg {
         width: 100%;
+    }
+
+    .table {
+        margin-top: 40px;
     }
 </style>

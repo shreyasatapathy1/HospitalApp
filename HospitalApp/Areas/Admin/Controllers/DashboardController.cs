@@ -1,13 +1,38 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Mvc;
+
+//namespace HospitalApp.Areas.Admin.Controllers
+//{
+//    [Area("Admin")]
+//    public class DashboardController : Controller
+//    {
+//        public IActionResult Index()
+//        {
+//            return View();
+//        }
+//    }
+//}
+
+
+using HospitalApp.Data.Repository;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class DashboardController : Controller
     {
+        private readonly IAppointmentRepository _appointmentRepository;
+
+        public DashboardController(IAppointmentRepository appointmentRepository)
+        {
+            _appointmentRepository = appointmentRepository;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var appointments = _appointmentRepository.GetAllAppointmentsWithDetails();
+            return View(appointments);
         }
     }
 }
+
