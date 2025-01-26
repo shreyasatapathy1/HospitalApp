@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\doctor\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\doctor\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|c:\\users\\shreya satapathy\\onedrive\\desktop\\hospitalappproject\\hospitalapp\\hospitalapp\\areas\\patient\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{377748CB-615B-4305-AFA7-E32A4CA97FC5}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\areas\\patient\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -34,15 +42,41 @@
       "DocumentGroups": [
         {
           "DockedHeight": 241,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Doctor\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Doctor\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Doctor\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Doctor\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T07:07:16.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "HospitalApp\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "HospitalApp\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADgAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T07:06:44.643Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "IMedicalReportRepository.cs",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Repository\\IMedicalReportRepository.cs",
               "RelativeDocumentMoniker": "HospitalApp\\Data\\Repository\\IMedicalReportRepository.cs",
@@ -50,12 +84,11 @@
               "RelativeToolTip": "HospitalApp\\Data\\Repository\\IMedicalReportRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T06:18:50.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-26T06:18:50.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MedicalReportRepository.cs",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Data\\Repository\\MedicalReportRepository.cs",
               "RelativeDocumentMoniker": "HospitalApp\\Data\\Repository\\MedicalReportRepository.cs",
@@ -63,12 +96,11 @@
               "RelativeToolTip": "HospitalApp\\Data\\Repository\\MedicalReportRepository.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAwBcAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T06:18:23.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-26T06:18:23.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Patient\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "HospitalApp\\Areas\\Patient\\Controllers\\DashboardController.cs",
@@ -76,25 +108,24 @@
               "RelativeToolTip": "HospitalApp\\Areas\\Patient\\Controllers\\DashboardController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T22:02:32.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T22:02:32.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Patient\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "HospitalApp\\Areas\\Patient\\Views\\Dashboard\\Index.cshtml",
               "ToolTip": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Patient\\Views\\Dashboard\\Index.cshtml",
               "RelativeToolTip": "HospitalApp\\Areas\\Patient\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAiwJ4AAACCAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEQAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-25T22:01:08.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ViewReport.cshtml",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Patient\\Views\\Appointment\\ViewReport.cshtml",
               "RelativeDocumentMoniker": "HospitalApp\\Areas\\Patient\\Views\\Appointment\\ViewReport.cshtml",
@@ -102,12 +133,11 @@
               "RelativeToolTip": "HospitalApp\\Areas\\Patient\\Views\\Appointment\\ViewReport.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-25T21:55:34.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T21:55:34.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AppointmentController.cs",
               "DocumentMoniker": "C:\\Users\\Shreya Satapathy\\OneDrive\\Desktop\\HospitalAppProject\\HospitalApp\\HospitalApp\\Areas\\Patient\\Controllers\\AppointmentController.cs",
               "RelativeDocumentMoniker": "HospitalApp\\Areas\\Patient\\Controllers\\AppointmentController.cs",
@@ -115,8 +145,7 @@
               "RelativeToolTip": "HospitalApp\\Areas\\Patient\\Controllers\\AppointmentController.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAAwHwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T21:52:47.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T21:52:47.821Z"
             }
           ]
         }
