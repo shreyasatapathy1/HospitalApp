@@ -20,5 +20,15 @@ namespace HospitalApp.Data.Repository
                 .Where(r => r.Appointment.DoctorId == doctorId)
                 .ToList();
         }
+
+        public GenerateReport GetReportWithDetails(int appointmentId)
+        {
+            return _context.GenerateReports
+                .Include(r => r.Appointment)
+                    .ThenInclude(a => a.Doctor)
+                        .ThenInclude(d => d.User)  // Eager load doctor and user
+                .FirstOrDefault(r => r.AppointmentId == appointmentId);
+        }
+
     }
 }

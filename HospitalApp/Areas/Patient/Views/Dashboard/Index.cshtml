@@ -1,59 +1,107 @@
-﻿@* @{ *@
-@*     ViewData["Title"] = "Patient Dashboard"; *@
-@* } *@
-
-@* <h1>Welcome to Patient Dashboard</h1> *@
-
-@* <p> *@
-@*     <a href="/Patient/Appointment/BookAppointment" class="btn btn-primary">Book Appointment</a> *@
-@* </p> *@
-
+﻿
 @{
     ViewData["Title"] = "Patient Dashboard";
 }
 
-<h1 class="text-center my-4">Welcome to Patient Dashboard</h1>
+<h1 class="text-center my-4">Welcome to Your Patient Dashboard</h1>
 
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-4 mb-4">
-            <div class="card text-center shadow-lg border-0">
+        <!-- Book Appointment Section -->
+        <div class="col-md-5">
+            <div class="card text-center shadow-lg border-0 bg-light">
                 <div class="card-body">
-                    <h5 class="card-title">Book Appointment</h5>
-                    <p class="card-text">Schedule a new appointment with a doctor.</p>
+                    <h5 class="card-title text-primary"><i class="bi bi-calendar-plus"></i> Book Appointment</h5>
+                    <p class="card-text text-muted">Schedule a new appointment with a doctor.</p>
                     <a href="/Patient/Appointment/BookAppointment" class="btn btn-success btn-lg">
-                        <i class="bi bi-calendar-plus"></i> Book Appointment
+                        <i class="bi bi-plus-circle"></i> Book Now
                     </a>
                 </div>
             </div>
         </div>
+
+        <!-- My Appointments Section -->
+        <div class="col-md-7">
+            <div class="card shadow-lg border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-primary"><i class="bi bi-journal-medical"></i> My Appointments</h5>
+                    <div class="table-responsive mt-3">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Doctor</th>
+                                    <th>Date</th>
+                                    <th>Time Slot</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var appointment in Model)
+                                {
+                                    <tr>
+                                        <td>@appointment.Doctor.User.Name</td>
+                                        <td>@appointment.Date.ToString("dd-MM-yyyy")</td>
+                                        <td>@appointment.TimeSlot</td>
+                                        <td>
+                                            <span class="badge @(appointment.Status == "Confirmed" ? "text-success" : "text-danger")">
+                                                @appointment.Status
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <a asp-area="Patient" asp-controller="Appointment" asp-action="ViewReport" asp-route-appointmentId="@appointment.Id"
+                                               class="btn btn-info btn-sm">
+                                                <i class="bi bi-eye"></i> View Report
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div class="mt-5 text-center">
-        <a href="/" class="btn btn-primary">Back to Home</a>
+        <a href="/" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Home</a>
     </div>
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
 <style>
     body {
-        background: url('') no-repeat center center fixed;
+        background: url('https://www.hospitalbackground.com/images/background.jpg') no-repeat center center fixed;
         background-size: cover;
     }
 
     .card {
         transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 15px;
     }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
     .card-title {
         font-weight: bold;
+        font-size: 1.4rem;
     }
 
     .btn-lg {
-        width: 100%;
+        width: 80%;
+    }
+
+    .table {
+        font-size: 0.95rem;
+    }
+
+    .badge {
+        font-size: 0.9rem;
     }
 </style>

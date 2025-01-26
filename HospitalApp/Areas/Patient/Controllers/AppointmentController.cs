@@ -16,13 +16,15 @@ namespace HospitalApp.Areas.Patient.Controllers
         private readonly IDoctorRepository _doctorRepository;
         private readonly IAppointmentRepository _appointmentRepository;
         private readonly IPatientRepository _patientRepository;
+        private readonly IMedicalReportRepository _medicalReportRepository;
 
-        public AppointmentController(UserManager<IdentityUser> userManager, IDoctorRepository doctorRepository, IAppointmentRepository appointmentRepository, IPatientRepository patientRepository)
+        public AppointmentController(UserManager<IdentityUser> userManager, IMedicalReportRepository medicalReportRepository, IDoctorRepository doctorRepository, IAppointmentRepository appointmentRepository, IPatientRepository patientRepository)
         {
             _userManager = userManager;
             _doctorRepository = doctorRepository;
             _appointmentRepository = appointmentRepository;
             _patientRepository = patientRepository;
+            _medicalReportRepository = medicalReportRepository;
         }
 
         public IActionResult BookAppointment()
@@ -113,6 +115,42 @@ namespace HospitalApp.Areas.Patient.Controllers
 
             return Json(doctors);
         }
+
+        public IActionResult ViewReport(int appointmentId)
+        {
+            //var report = _medicalReportRepository.Find(r => r.AppointmentId == appointmentId)
+            //                                     .FirstOrDefault();
+
+            var report = _medicalReportRepository.GetReportWithDetails(appointmentId);
+
+
+            if (report == null)
+            {
+                return NotFound("No report found for this appointment.");
+            }
+
+            // Ensure related entities are loaded properly
+            if (report.Appointment == null || report.Appointment.Doctor == null || report.Appointment.Doctor.User == null)
+            {
+                return NotFound("Incomplete appointment details. Please contact support.");
+            }
+
+            var viewModel = new PatientMedicalReportViewModel
+            {
+                ReportId = report.ReportId,
+                AppointmentId = report.AppointmentId,
+                DoctorName = report.Appointment?.Doctor?.User?.Name ?? "N/A",
+                AppointmentDate = report.Appointment?.Date.ToDateTime(TimeOnly.MinValue) ?? DateTime.MinValue,
+                Issue = report.Issue ?? "N/A",
+                Symptoms = report.Symptoms ?? "N/A",
+                Diagnosis = report.Diagnosis ?? "N/A",
+                Prescription = report.Prescription ?? "N/A"
+            };
+
+            return View(viewModel);
+        }
+
+
     }
 }
 

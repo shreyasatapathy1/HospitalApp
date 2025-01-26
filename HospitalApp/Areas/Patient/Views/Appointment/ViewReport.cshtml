@@ -1,0 +1,46 @@
+﻿@model HospitalApp.Models.ViewModel.PatientMedicalReportViewModel
+
+@{
+    ViewData["Title"] = "Medical Report";
+}
+
+<h2 class="text-center my-4">Medical Report</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow-lg border-0 p-4">
+                <div class="card-body">
+                    <h4 class="mb-3">Report Details</h4>
+                    <div class="mb-3">
+                        <label>Doctor Name:</label>
+                        <p class="form-control">@Model.DoctorName</p>
+                    </div>
+                    <div class="mb-3">
+                        <label>Appointment Date:</label>
+                        <p class="form-control">@Model.AppointmentDate.ToString("dd-MM-yyyy")</p>
+                    </div>
+                    <div class="mb-3">
+                        <label>Issue:</label>
+                        <p class="form-control">@Model.Issue</p>
+                    </div>
+                    <div class="mb-3">
+                        <label>Symptoms:</label>
+                        <p class="form-control">@Model.Symptoms</p>
+                    </div>
+                    <div class="mb-3">
+                        <label>Diagnosis:</label>
+                        <p class="form-control">@Model.Diagnosis</p>
+                    </div>
+                    <div class="mb-3">
+                        <label>Prescription:</label>
+                        <p class="form-control">@Model.Prescription</p>
+                    </div>
+                    <div class="text-center">
+                        <a asp-area="Patient" asp-controller="Dashboard" asp-action="Index" class="btn btn-primary">Back to Appointments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
