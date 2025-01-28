@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HospitalApp.styles.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/Notify.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         html, body {
             height: 100%;
@@ -29,6 +29,24 @@
             color: white;
             padding: 10px;
         }
+
+        .navbar-brand {
+            color: forestgreen;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: forestgreen;
+            font-weight: bold;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: darkgreen;
+            }
+
+        .navbar-nav .nav-item .fa {
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
@@ -36,50 +54,55 @@
         <header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                 <div class="container-fluid">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">HospitalApp</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-hospital"></i> HospitalApp
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Home" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
                             @if (User.IsInRole("Admin"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin</a>
+                                    <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
+                                        <i class="fas fa-user-shield"></i> Admin
+                                    </a>
                                 </li>
                             }
                             @if (User.IsInRole("Doctor"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Doctor" asp-controller="Appointment" asp-action="Index">Doctor </a>
+                                    <a class="nav-link" asp-area="Doctor" asp-controller="Appointment" asp-action="Index">
+                                        <i class="fas fa-stethoscope"></i> Doctor
+                                    </a>
                                 </li>
                             }
                             @if (User.IsInRole("Patient"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Patient" asp-controller="Dashboard" asp-action="Index">Patient </a>
+                                    <a class="nav-link" asp-area="Patient" asp-controller="Dashboard" asp-action="Index">
+                                        <i class="fas fa-user-injured"></i> Patient
+                                    </a>
                                 </li>
                             }
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                    <i class="fas fa-user-secret"></i> Privacy
+                                </a>
                             </li>
                         </ul>
                         @if (User.IsInRole("Doctor"))
-                            {
-                            <ul class ="navbar-nav ml-auto">
-                                <button type="button" class="icon-button">
-                                    <span class="material-icons">notifications</span>
-                                    <span class="icon-button__badge">2</span>
-                                </button>
-
-
+                        {
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-bell"></i> Notifications
+                                    </a>
+                                </li>
                             </ul>
-
-                            }
+                        }
                         <partial name="_LoginPartial" />
                     </div>
                 </div>
@@ -98,7 +121,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/Notify.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

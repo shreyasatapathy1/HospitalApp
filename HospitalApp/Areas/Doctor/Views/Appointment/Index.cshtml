@@ -30,7 +30,7 @@
                         <td>@appointment.Date.ToString("dd-MM-yyyy")</td>
                         <td>@appointment.TimeSlot</td>
                         <td>
-                            <span class="badge @(appointment.Status == "Confirmed" ? "text-success" : "text-danger")">
+                            <span class="badge @(appointment.Status == "Pending" ? "text-danger" : "text-success")">
                                 @appointment.Status
                             </span>
                         </td>
@@ -55,7 +55,7 @@
 
 <style>
     body {
-        background: url('https://www.hospitalbackground.com/images/background.jpg') no-repeat center center fixed;
+        background: url('') no-repeat center center fixed;
         background-size: cover;
     }
 

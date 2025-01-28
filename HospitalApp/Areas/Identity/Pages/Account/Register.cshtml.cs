@@ -176,8 +176,10 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                     await _dbContext.SaveChangesAsync();
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    return LocalRedirect(returnUrl);
+                    return LocalRedirect(Url.Content("~/Patient/Dashboard"));
+                    //return LocalRedirect(returnUrl);
                 }
+
 
                 foreach (var error in result.Errors)
                 {

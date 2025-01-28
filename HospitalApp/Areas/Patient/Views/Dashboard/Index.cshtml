@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<HospitalApp.Models.Appointment>
 @{
     ViewData["Title"] = "Patient Dashboard";
 }
@@ -21,48 +21,51 @@
         </div>
 
         <!-- My Appointments Section -->
-        <div class="col-md-7">
-            <div class="card shadow-lg border-0">
-                <div class="card-body">
-                    <h5 class="card-title text-primary"><i class="bi bi-journal-medical"></i> My Appointments</h5>
-                    <div class="table-responsive mt-3">
-                        <table class="table table-bordered table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>Doctor</th>
-                                    <th>Date</th>
-                                    <th>Time Slot</th>
-                                    <th>Status</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var appointment in Model)
-                                {
+        @if(Model!=null && Model.Any()){
+            <div class="col-md-7">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="bi bi-journal-medical"></i> My Appointments</h5>
+                        <div class="table-responsive mt-3">
+                            <table class="table table-bordered table-striped">
+                                <thead class="thead-dark">
                                     <tr>
-                                        <td>@appointment.Doctor.User.Name</td>
-                                        <td>@appointment.Date.ToString("dd-MM-yyyy")</td>
-                                        <td>@appointment.TimeSlot</td>
-                                        <td>
-                                            <span class="badge @(appointment.Status == "Confirmed" ? "text-success" : "text-danger")">
-                                                @appointment.Status
-                                            </span>
-                                        </td>
-
-                                        <td>
-                                            <a asp-area="Patient" asp-controller="Appointment" asp-action="ViewReport" asp-route-appointmentId="@appointment.Id"
-                                               class="btn btn-info btn-sm">
-                                                <i class="bi bi-eye"></i> View Report
-                                            </a>
-                                        </td>
+                                        <th>Doctor</th>
+                                        <th>Date</th>
+                                        <th>Time Slot</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
                                     </tr>
-                                }
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach (var appointment in Model)
+                                    {
+                                        <tr>
+                                            <td>@appointment.Doctor.User.Name</td>
+                                            <td>@appointment.Date.ToString("dd-MM-yyyy")</td>
+                                            <td>@appointment.TimeSlot</td>
+                                            <td>
+                                                <span class="badge @(appointment.Status == "Confirmed" ? "text-success" : "text-danger")">
+                                                    @appointment.Status
+                                                </span>
+                                            </td>
+
+                                            <td>
+                                                <a asp-area="Patient" asp-controller="Appointment" asp-action="ViewReport" asp-route-appointmentId="@appointment.Id"
+                                                   class="btn btn-info btn-sm">
+                                                    <i class="bi bi-eye"></i> View Report
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
+       
     </div>
 
     <div class="mt-5 text-center">

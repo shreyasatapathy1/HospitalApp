@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using HospitalApp.Models;
 
 namespace HospitalApp.Areas.Patient.Controllers
 {

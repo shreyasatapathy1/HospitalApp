@@ -33,7 +33,10 @@ namespace HospitalApp.Areas.Patient.Controllers
             }
 
             var appointments = _appointmentRepository.GetAppointmentsByPatientId(patient.Id);
-
+            if (appointments == null)
+            {
+                return View(null);
+            }
             return View(appointments);
         }
 

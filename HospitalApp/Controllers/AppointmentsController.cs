@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HospitalApp.Data;
+using HospitalApp.Models;
 
 namespace HospitalApp.Controllers
 {
@@ -98,21 +99,21 @@ namespace HospitalApp.Controllers
 
             return NoContent();
         }
-        // GET: api/Appointments/count/confirmed
-        [HttpGet("count/confirmed")]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<int>> GetPendingRequestCount()
-        {
-            int pendingCount = await _context.Appointments
-                .CountAsync(r => r.Status == "Confirmed");
+        //// GET: api/Appointments/count/confirmed
+        //[HttpGet("count/confirmed")]
+        //[ProducesResponseType(StatusCodes.Status403Forbidden)]
+        //[ProducesResponseType(StatusCodes.Status200OK)]
+        //public async Task<ActionResult<int>> GetPendingRequestCount()
+        //{
+        //    int pendingCount = await _context.Appointments
+        //        .CountAsync(r => r.Status == "Confirmed");
 
-            return Ok(new
-            {
-                success = true,
-                count = pendingCount
-            });
-        }
+        //    return Ok(new
+        //    {
+        //        success = true,
+        //        count = pendingCount
+        //    });
+        //}
         private bool AppointmentExists(int id)
         {
             return _context.Appointments.Any(e => e.Id == id);
