@@ -132,7 +132,7 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                         if (isDoctor)
                         {
                             // Redirect Patients to Patient Dashboard Page
-                            return LocalRedirect(Url.Content("~/Doctor/Dashboard"));
+                            return LocalRedirect(Url.Content("~/Doctor/Appointment"));
                         }
 
                         // Check if the user is an Patient

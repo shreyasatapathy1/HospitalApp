@@ -4,6 +4,7 @@ using HospitalApp.Models.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using SQLitePCL;
 
 namespace HospitalApp.Areas.Doctor.Controllers
 {
@@ -112,7 +113,9 @@ namespace HospitalApp.Areas.Doctor.Controllers
                         _medicalReportRepository.Update(existingReport);
                     }
                 }
-
+                var appointment = _appointmentRepository.GetById(model.AppointmentId);
+                appointment.Status = "Completed";
+                _appointmentRepository.Update(appointment);
                 return RedirectToAction("Index");
             }
 

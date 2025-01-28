@@ -1,37 +1,89 @@
 ﻿@model HospitalApp.Models.ViewModel.DoctorAppointmentsViewModel
 
 @{
-    ViewData["Title"] = "My Appointments";
+    ViewData["Title"] = "Doctor Dashboard";
 }
 
-<h2 class="text-center my-4">Upcoming Appointments for Dr. @Model.DoctorName</h2>
+<h1 class="text-center my-4">Doctor Dashboard</h1>
+<hr />
 
-<table class="table table-bordered table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Patient.User.Name)</th>
-            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Date)</th>
-            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().TimeSlot)</th>
-            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Status)</th>
-            <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Notes)</th>
-            <th>Medical Report</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var appointment in Model.UpcomingAppointments)
-        {
-            <tr>
-                <td>@appointment.Patient.User.Name</td>
-                <td>@appointment.Date.ToString("dd-MM-yyyy")</td>
-                <td>@appointment.TimeSlot</td>
-                <td>@appointment.Status</td>
-                <td>@appointment.Notes</td>
-                <td>
-                    <a asp-action="MedicalReport" asp-route-appointmentId="@appointment.Id" class="btn btn-info">
-                        View Report
-                    </a>
-                </td>
-            </tr>
+<h2 class="text-center my-4">Appointments for Dr. @Model.DoctorName</h2>
+
+<div class="container mt-5">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Patient.User.Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Date)</th>
+                    <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().TimeSlot)</th>
+                    <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Status)</th>
+                    <th>@Html.DisplayNameFor(model => model.UpcomingAppointments.FirstOrDefault().Notes)</th>
+                    <th>Medical Report</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var appointment in Model.UpcomingAppointments)
+                {
+                    <tr>
+                        <td>@appointment.Patient.User.Name</td>
+                        <td>@appointment.Date.ToString("dd-MM-yyyy")</td>
+                        <td>@appointment.TimeSlot</td>
+                        <td>
+                            <span class="badge @(appointment.Status == "Confirmed" ? "text-success" : "text-danger")">
+                                @appointment.Status
+                            </span>
+                        </td>
+                        <td>@appointment.Notes</td>
+                        <td>
+                            <a asp-action="MedicalReport" asp-route-appointmentId="@appointment.Id" class="btn btn-info btn-sm">
+                                <i class="bi bi-eye"></i> View Report
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-5 text-center">
+        <a href="/" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to Home</a>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+<style>
+    body {
+        background: url('https://www.hospitalbackground.com/images/background.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 15px;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-    </tbody>
-</table>
+
+    .card-title {
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+
+    .btn-lg {
+        width: 80%;
+    }
+
+    .table {
+        font-size: 0.95rem;
+        margin-top: 40px;
+    }
+
+    .badge {
+        font-size: 0.9rem;
+    }
+</style>

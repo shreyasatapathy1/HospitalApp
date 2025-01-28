@@ -38,8 +38,7 @@ namespace HospitalApp.Models.ViewModel
 
         public List<string> PaymentOptions { get; set; } = new()
         {
-            "Credit Card",
-            "PayPal",
+            //"Credit Card",
             "Cash"
         };
 

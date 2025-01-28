@@ -67,7 +67,7 @@ namespace HospitalApp.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Appointments");
+                    b.ToTable("Appointments", (string)null);
                 });
 
             modelBuilder.Entity("HospitalApp.Models.Doctor", b =>
@@ -99,7 +99,7 @@ namespace HospitalApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Doctors");
+                    b.ToTable("Doctors", (string)null);
                 });
 
             modelBuilder.Entity("HospitalApp.Models.GenerateReport", b =>
@@ -140,7 +140,7 @@ namespace HospitalApp.Migrations
 
                     b.HasIndex("AppointmentId");
 
-                    b.ToTable("GenerateReports");
+                    b.ToTable("GenerateReports", (string)null);
                 });
 
             modelBuilder.Entity("HospitalApp.Models.Patient", b =>
@@ -170,7 +170,7 @@ namespace HospitalApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Patients");
+                    b.ToTable("Patients", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

@@ -1,6 +1,8 @@
 ﻿using HospitalApp.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 public class Appointment
 {
@@ -10,22 +12,26 @@ public class Appointment
     public int DoctorId { get; set; }
 
     [ForeignKey("DoctorId")]
-    public Doctor Doctor { get; set; }
+    [JsonIgnore]
+    [ValidateNever]
+    public Doctor Doctor { get; set; }//navigation
 
     [Required]
     public int PatientId { get; set; }
 
     [ForeignKey("PatientId")]
-    public Patient Patient { get; set; }
+    [JsonIgnore]
+    [ValidateNever]
+    public Patient Patient { get; set; }//navigation
 
     [Required]
     public DateOnly Date { get; set; }
 
     [Required]
-    public string TimeSlot { get; set; }  // New property for booking slot
+    public string TimeSlot { get; set; }  
 
     [Required, MaxLength(50)]
-    public string Status { get; set; } // e.g., Pending, Accepted, Rejected
+    public string Status { get; set; } // e.g., Pending, Confirmed, Completed
 
     [MaxLength(1000)]
     public string Notes { get; set; }
@@ -33,5 +39,5 @@ public class Appointment
     public bool IsPaid { get; set; }  // Payment status
 
     [MaxLength(50)]
-    public string PaymentMethod { get; set; }  // e.g., Credit Card, PayPal
+    public string PaymentMethod { get; set; }  // e.g., Cash
 }

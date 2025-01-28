@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HospitalApp.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Notify.css" />
     <style>
         html, body {
             height: 100%;
@@ -53,7 +55,7 @@
                             @if (User.IsInRole("Doctor"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Doctor" asp-controller="Dashboard" asp-action="Index">Doctor </a>
+                                    <a class="nav-link text-dark" asp-area="Doctor" asp-controller="Appointment" asp-action="Index">Doctor </a>
                                 </li>
                             }
                             @if (User.IsInRole("Patient"))
@@ -66,6 +68,18 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                             </li>
                         </ul>
+                        @if (User.IsInRole("Doctor"))
+                            {
+                            <ul class ="navbar-nav ml-auto">
+                                <button type="button" class="icon-button">
+                                    <span class="material-icons">notifications</span>
+                                    <span class="icon-button__badge">2</span>
+                                </button>
+
+
+                            </ul>
+
+                            }
                         <partial name="_LoginPartial" />
                     </div>
                 </div>
@@ -84,6 +98,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Notify.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

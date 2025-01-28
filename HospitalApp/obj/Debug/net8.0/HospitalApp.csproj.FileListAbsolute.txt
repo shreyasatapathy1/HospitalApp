@@ -1786,3 +1786,7 @@ C:\Users\2369954\OneDrive - Cognizant\Desktop\Hospital_Management_System\Backup\
 C:\Users\2369954\OneDrive - Cognizant\Desktop\Hospital_Management_System\Backup\HospitalApp\HospitalApp\obj\Debug\net8.0\HospitalApp.pdb
 C:\Users\2369954\OneDrive - Cognizant\Desktop\Hospital_Management_System\Backup\HospitalApp\HospitalApp\obj\Debug\net8.0\HospitalApp.genruntimeconfig.cache
 C:\Users\2369954\OneDrive - Cognizant\Desktop\Hospital_Management_System\Backup\HospitalApp\HospitalApp\obj\Debug\net8.0\ref\HospitalApp.dll
+C:\Users\2369954\OneDrive - Cognizant\Desktop\Hospital_Management_System\HospitalApp\HospitalApp\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\2369954\OneDrive - Cognizant\Desktop\Hospital_Management_System\HospitalApp\HospitalApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\2369954\OneDrive - Cognizant\Desktop\Hospital_Management_System\HospitalApp\HospitalApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\2369954\OneDrive - Cognizant\Desktop\Hospital_Management_System\HospitalApp\HospitalApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
