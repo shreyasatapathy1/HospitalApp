@@ -86,7 +86,7 @@ namespace HospitalApp.Areas.Doctor.Controllers
             {
                 if (model.ReportId == 0)
                 {
-                    // Save new report
+                    // Saving new report
                     var report = new GenerateReport
                     {
                         AppointmentId = model.AppointmentId,
@@ -101,7 +101,7 @@ namespace HospitalApp.Areas.Doctor.Controllers
                 }
                 else
                 {
-                    // Update existing report
+                    // Updating existing report
                     var existingReport = _medicalReportRepository.GetById(model.ReportId);
                     if (existingReport != null)
                     {

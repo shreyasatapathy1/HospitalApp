@@ -123,10 +123,10 @@ namespace HospitalApp.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            if (!_roleManager.RoleExistsAsync("Patient").GetAwaiter().GetResult()) 
-                _roleManager.CreateAsync(new IdentityRole("Patient")).GetAwaiter().GetResult(); 
-                _roleManager.CreateAsync(new IdentityRole("Doctor")).GetAwaiter().GetResult(); 
-                _roleManager.CreateAsync(new IdentityRole("Admin")).GetAwaiter().GetResult();
+            //if (!_roleManager.RoleExistsAsync("Patient").GetAwaiter().GetResult()) 
+            //    _roleManager.CreateAsync(new IdentityRole("Patient")).GetAwaiter().GetResult(); 
+            //    _roleManager.CreateAsync(new IdentityRole("Doctor")).GetAwaiter().GetResult(); 
+            //    _roleManager.CreateAsync(new IdentityRole("Admin")).GetAwaiter().GetResult();
 
 
             //Input = new()

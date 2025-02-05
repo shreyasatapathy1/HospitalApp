@@ -74,7 +74,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseMiddleware<SeedDataMiddleware>();
 app.MapControllerRoute(
     name: "default",
     pattern: "{area=Home}/{controller=Home}/{action=Index}/{id?}");

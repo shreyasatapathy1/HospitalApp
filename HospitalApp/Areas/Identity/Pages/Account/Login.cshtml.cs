@@ -93,7 +93,7 @@ namespace HospitalApp.Areas.Identity.Pages.Account
 
             returnUrl ??= Url.Content("~/");
 
-            // Clear the existing external cookie to ensure a clean login process
+            // Clearing the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -109,37 +109,37 @@ namespace HospitalApp.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // Attempt to sign in the user
+                // Attempting to sign in the user
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
 
-                    // Get the currently logged-in user
+                    // Getting the currently logged-in user
                     var user = await _signInManager.UserManager.FindByEmailAsync(Input.Email);
                     if (user != null)
                     {
-                        // Check if the user is an Admin
+                        // Checking if the user is an Admin
                         var isAdmin = await _signInManager.UserManager.IsInRoleAsync(user, "Admin");
                         if (isAdmin)
                         {
-                            // Redirect Admins to Admin Dashboard Page
+                            
                             return LocalRedirect(Url.Content("~/Admin/Dashboard"));
                         }
 
-                        // Check if the user is an Doctor
+                        // Checking if the user is an Doctor
                         var isDoctor = await _signInManager.UserManager.IsInRoleAsync(user, "Doctor");
                         if (isDoctor)
                         {
-                            // Redirect Patients to Patient Dashboard Page
+                            
                             return LocalRedirect(Url.Content("~/Doctor/Appointment"));
                         }
 
-                        // Check if the user is an Patient
+                        // Checking if the user is an Patient
                         var isPatient = await _signInManager.UserManager.IsInRoleAsync(user, "Patient");
                         if (isPatient)
                         {
-                            // Redirect Patients to Patient Dashboard Page
+                            
                             return LocalRedirect(Url.Content("~/Patient/Dashboard"));
                         }
                     }
@@ -163,7 +163,7 @@ namespace HospitalApp.Areas.Identity.Pages.Account
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            
             return Page();
         }
 

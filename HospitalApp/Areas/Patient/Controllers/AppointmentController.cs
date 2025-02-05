@@ -119,8 +119,6 @@ namespace HospitalApp.Areas.Patient.Controllers
 
         public IActionResult ViewReport(int appointmentId)
         {
-            //var report = _medicalReportRepository.Find(r => r.AppointmentId == appointmentId)
-            //                                     .FirstOrDefault();
 
             var report = _medicalReportRepository.GetReportWithDetails(appointmentId);
 
@@ -130,7 +128,7 @@ namespace HospitalApp.Areas.Patient.Controllers
                 return NotFound("No report found for this appointment.");
             }
 
-            // Ensure related entities are loaded properly
+            // Ensuring related entities are loaded properly
             if (report.Appointment == null || report.Appointment.Doctor == null || report.Appointment.Doctor.User == null)
             {
                 return NotFound("Incomplete appointment details. Please contact support.");
