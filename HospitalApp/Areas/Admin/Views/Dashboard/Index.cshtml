@@ -72,7 +72,11 @@
                         <td>@appointment.DoctorName</td>
                         <td>@appointment.AppointmentDate.ToString("dd-MM-yyyy")</td>
                         <td>@appointment.TimeSlot</td>
-                        <td>@appointment.Status</td>
+                        <td>
+                            <span class="badge @(appointment.Status == "Confirmed" ? "text-warning" : "text-success")">
+                                @appointment.Status
+                            </span>
+                        </td>
                         <td>@appointment.PaymentMethod</td>
                         <td>@appointment.Issue</td>
                         <td>@appointment.MedicalHistory</td>
@@ -114,5 +118,9 @@
 
     .table {
         margin-top: 40px;
+    }
+
+    .badge {
+        font-size: 0.9rem;
     }
 </style>

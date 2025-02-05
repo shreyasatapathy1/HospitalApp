@@ -100,9 +100,12 @@ namespace HospitalApp.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
 
             [Required]
-            public string? Name { get; set; }
+            public string Name { get; set; }
 
-            public string? PhoneNumber { get; set; }
+            [Required]
+            [RegularExpression(@"^\d{10}$", ErrorMessage = "Phone Number must be exactly 10 digits and only numbers allowed.")]
+            public string PhoneNumber { get; set; }
+
 
             [Required]
             [Range(1, 120, ErrorMessage = "Age must be between 1 and 120.")]

@@ -19,16 +19,16 @@ namespace HospitalApp.Data
 
         public DbSet<GenerateReport> GenerateReports { get; set; }
     
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-                base.OnModelCreating(modelBuilder);
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //        base.OnModelCreating(modelBuilder);
 
-                modelBuilder.Entity<Doctor>()
-                    .HasOne(d => d.User)
-                    .WithMany()
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.NoAction); // Specify NO ACTION for delete behavior
-        }
+        //        modelBuilder.Entity<Doctor>()
+        //            .HasOne(d => d.User)
+        //            .WithMany()
+        //            .HasForeignKey(d => d.UserId)
+        //            .OnDelete(DeleteBehavior.NoAction); // Specify NO ACTION for delete behavior
+        //}
     }
 }
 

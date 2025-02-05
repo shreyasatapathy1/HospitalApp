@@ -11,10 +11,6 @@ namespace HospitalApp.Areas.Home.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         public IActionResult About()
         {

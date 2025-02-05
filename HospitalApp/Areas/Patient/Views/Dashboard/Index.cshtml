@@ -45,7 +45,7 @@
                                             <td>@appointment.Date.ToString("dd-MM-yyyy")</td>
                                             <td>@appointment.TimeSlot</td>
                                             <td>
-                                                <span class="badge @(appointment.Status == "Confirmed" ? "text-success" : "text-danger")">
+                                                <span class="badge @(appointment.Status == "Confirmed" ? "text-warning" : "text-success")">
                                                     @appointment.Status
                                                 </span>
                                             </td>
