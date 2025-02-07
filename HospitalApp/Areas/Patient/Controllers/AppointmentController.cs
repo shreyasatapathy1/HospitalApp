@@ -64,6 +64,11 @@ namespace HospitalApp.Areas.Patient.Controllers
             }
 
             Console.WriteLine($"Patient ID: {patient.Id}");
+            if (model.Date.Date < DateTime.Today)
+            {
+                ModelState.AddModelError("Date", "You cannot book an appointment for a past date.");
+                return View(model);
+            }
 
             if (_appointmentRepository.IsSlotAvailable(model.DoctorId, DateOnly.FromDateTime(model.Date), model.TimeSlot))
             {
