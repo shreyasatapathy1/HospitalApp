@@ -29,7 +29,7 @@ public class SeedDataMiddleware
             var userManager = scopedProvider.GetRequiredService<UserManager<IdentityUser>>();
             var userStore = scopedProvider.GetRequiredService<IUserStore<IdentityUser>>();
 
-            // Check and create roles
+            // Checking and creating roles
             if (!await roleManager.RoleExistsAsync("Admin"))
             {
                 await roleManager.CreateAsync(new IdentityRole("Admin"));
@@ -42,7 +42,7 @@ public class SeedDataMiddleware
             {
                 await roleManager.CreateAsync(new IdentityRole("Patient"));
             }
-            // Fetch admin users from configuration
+            // Fetching admin users from configuration
             var adminUsersConfig = configuration.GetSection("AdminUsers").GetChildren();
             foreach (var adminUserConfig in adminUsersConfig)
             {

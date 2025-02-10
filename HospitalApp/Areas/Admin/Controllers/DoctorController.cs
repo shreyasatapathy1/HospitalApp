@@ -93,7 +93,7 @@ namespace HospitalApp.Areas.Admin.Controllers
                 {
                     return NotFound();
                 }
-                // Update User fields
+                
                 var user = await _userManager.FindByIdAsync(existingDoctor.UserId) as ApplicationUser;
                 user.Email = doctor.User.Email;
                 user.Name = doctor.User.Name;
@@ -101,7 +101,7 @@ namespace HospitalApp.Areas.Admin.Controllers
                 user.PhoneNumber = doctor.User.PhoneNumber;
                 await _userManager.UpdateAsync(user);
 
-                // Update Doctor fields
+                
                 existingDoctor.Specialty = doctor.Specialty;
                 existingDoctor.Qualifications = doctor.Qualifications;
                 existingDoctor.ExperienceInYears = doctor.ExperienceInYears;
